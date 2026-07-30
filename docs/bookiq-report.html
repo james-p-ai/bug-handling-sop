@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Report a BookIQ problem | Bug Handling SOP</title>
+  <meta name="description" content="BookIQ client bug reports are filed inside the signed-in BookIQ app — not on this training site." />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/bug-handling.css" />
+</head>
+<body data-page="bookiq-report" data-base="" data-file="bookiq-report.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">BookIQ report</div>
+      </header>
+      <main class="content" id="top">
+        <section class="hero">
+          <span class="status-chip">Product clients · not this course</span>
+          <h1>Report a problem <em>in BookIQ</em></h1>
+          <p class="hero-lede">
+            Accountants and business owners report BookIQ issues from inside the signed-in app.
+            This page is a pointer only — the form lives on the BookIQ domain so your session can be attached automatically.
+          </p>
+          <p style="margin-top:1.25rem">
+            <a class="btn btn-primary" href="https://app.dev.bookiq.io/report-bug">Open BookIQ bug report →</a>
+          </p>
+        </section>
+
+        <div class="section-card">
+          <p class="eyebrow">What happens</p>
+          <h3>Signed-in intake → GitHub issue + Bug Report board</h3>
+          <ol>
+            <li>Sign in to BookIQ and open <strong>Report a problem</strong> (user menu or side nav), or use the button above.</li>
+            <li>Answer two questions: what you were trying to do, and what happened instead.</li>
+            <li>You get a <strong>Reference #N</strong> — no GitHub URL in the product UI.</li>
+            <li>Our team gets a structured issue on <code>Book-IQ/bookiqv1-rc</code> and a card on the Practical Office Bug Report project.</li>
+          </ol>
+        </div>
+
+        <div class="hard-truth">
+          <h3>Hard truth</h3>
+          <p>
+            Do <strong>not</strong> file BookIQ client reports as issues on this training repo.
+            Use the in-app form so tenant, user, and environment context ride along with the submission.
+          </p>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Environments</p>
+          <h3>Where to open the form</h3>
+          <ul>
+            <li><strong>Dev</strong> — <a href="https://app.dev.bookiq.io/report-bug">app.dev.bookiq.io/report-bug</a> (day-to-day)</li>
+            <li><strong>Staging / UAT</strong> — <a href="https://app.staging.bookiq.io/report-bug">app.staging.bookiq.io/report-bug</a> when that environment is in use</li>
+            <li><strong>Production</strong> — same path on the production BookIQ host when intake is enabled there</li>
+          </ul>
+          <p style="margin-top:0.75rem;font-size:0.9rem;color:var(--ink-faint)">
+            Canonical in-app route: <code>/t/:tenantId/help/report-bug</code>. The short <code>/report-bug</code> alias redirects to your default tenant.
+          </p>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">For engineers</p>
+          <h3>This course is still the process home</h3>
+          <p>
+            Modules 1–5 teach the Practical Office bug loop (<code>/triage</code>, diagnosis, TDD, review).
+            Client-reported BookIQ tickets land already labeled for that loop — start from triage, not from inventing a template.
+          </p>
+          <p style="margin-top:0.75rem">
+            <a class="btn btn-ghost btn-sm" href="module-1.html">Start Module 1 →</a>
+            <a class="btn btn-ghost btn-sm" href="https://github.com/Book-IQ/bookiqv1-rc" target="_blank" rel="noopener noreferrer">bookiqv1-rc →</a>
+          </p>
+        </div>
+
+        <div class="page-nav no-print" id="pageNav"></div>
+      </main>
+    </div>
+  </div>
+  <script src="js/bug-handling.js"></script>
+</body>
+</html>
