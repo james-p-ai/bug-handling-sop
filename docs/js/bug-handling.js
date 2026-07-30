@@ -15,6 +15,7 @@
   const REFERENCE = [
     { id: "next-steps", href: "next-steps.html", num: "→", label: "Next steps" },
     { id: "certification", href: "certification.html", num: "✓", label: "Certification" },
+    { id: "bookiq-report", href: "bookiq-report.html", num: "BQ", label: "BookIQ report" },
   ];
 
   const PROGRESS_IDS = [
@@ -33,6 +34,7 @@
     ...MODULES.map((m) => m.href),
     "next-steps.html",
     "certification.html",
+    "bookiq-report.html",
     "quick-reference.html",
   ];
 
